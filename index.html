@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#281456">
+  <title>Pop Dash — Catch the ball!</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main class="game">
+    <header>
+      <p class="eyebrow">A LITTLE CHALLENGE. A LOT OF POP.</p>
+      <h1>Pop<span>Dash</span><span class="spark">✦</span></h1>
+      <p class="intro">One ball. Thirty seconds. How many can you catch?</p>
+    </header>
+    <section class="dashboard" aria-label="Game statistics">
+      <div class="stat"><span>SCORE</span><strong id="score">0</strong></div>
+      <div class="stat"><span>TIME LEFT</span><strong><span id="timer">30</span><small>s</small></strong></div>
+      <button id="restart" class="restart" type="button">↻ Restart</button>
+    </section>
+    <div class="time-track" aria-hidden="true"><div id="time-bar"></div></div>
+    <section id="arena" class="arena" aria-label="Ball playing field">
+      <span class="decoration star-one" aria-hidden="true">✦</span>
+      <span class="decoration star-two" aria-hidden="true">✧</span>
+      <button id="ball" class="ball" type="button" aria-label="Catch the ball" hidden><span aria-hidden="true">✦</span></button>
+      <div id="overlay" class="overlay">
+        <div class="badge" aria-hidden="true">✦</div>
+        <h2 id="message-title">Ready, set, pop!</h2>
+        <p id="message">Click or tap the moving ball to score a point.</p>
+        <button id="start" class="primary" type="button">Let’s play <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+    <footer><span class="dot"></span> Click the ball • +1 point per catch <span class="footer-star" aria-hidden="true">✦</span> Make every second count.</footer>
+    <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+  </main>
+</body>
+</html>
